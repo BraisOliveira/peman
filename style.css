@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Manjari:wght@400;700&display=swap');
+
+:root {
+    --fontePrincipal: 'Manjari', sans-serif;
+    --colorPrincipal: #f1f1f1;
+}
+
+::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    /*font-size: 62.5%;*/
+}
+
+body {
+    /*font-size: 1.6rem;*/
+    font-family: var(--fontePrincipal);
+    color: var(--colorPrincipal);
+    background: linear-gradient(45deg, #b3d0e2, #4d82aa);
+    height: 100vh;
+}
+
+.container {
+    width: 800px;
+    height: 600px;
+    background: linear-gradient(45deg, #1068b6, #ad5e86);
+    display: grid;
+    grid-template: 100px 300px 100px 100px / repeat(8, 100px);
+    margin: 100px auto 0;
+    position: relative;
+    border: 1px solid var(--colorPrincipal);
+}
+.cabeceira {
+    grid-area: 1 / 1 / 2 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
