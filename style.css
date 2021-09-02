@@ -2,10 +2,10 @@
 
 :root {
     --fontePrincipal: 'Manjari', sans-serif;
-    --colorPrincipal: #f1f1f1;
+    --corPrincipal: #f1f1f1;
 }
 
-::before, ::after {
+*, ::before, ::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -18,7 +18,7 @@ html {
 body {
     /*font-size: 1.6rem;*/
     font-family: var(--fontePrincipal);
-    color: var(--colorPrincipal);
+    color: var(--corPrincipal);
     background: linear-gradient(45deg, #b3d0e2, #4d82aa);
     height: 100vh;
 }
@@ -31,10 +31,39 @@ body {
     grid-template: 100px 300px 100px 100px / repeat(8, 100px);
     margin: 100px auto 0;
     position: relative;
-    border: 1px solid var(--colorPrincipal);
+    border: 1px solid var(--corPrincipal);
 }
 .cabeceira {
     grid-area: 1 / 1 / 2 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--corPrincipal);
+}
+
+.bloc-logo,
+.bloc-info {
+    width: 50%;
+}
+.bloc-logo img {
+    width: 100%;
+    height: auto;
+}
+.bloc-info .tempo,
+.bloc-info .localizacion {
+    font-size: 40px;
+}
+
+.bloc-info .localizacion{
+    word-wrap: break-word;
+}
+
+.bloc-info .temperatura {
+    font-size: 60px;
+}
+
+.bloc-logo-info {
+    grid-area: 2 / 1 / 3 / -1;
     display: flex;
     justify-content: center;
     align-items: center;
